@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Notepad</title>
+    <!-- Link to our stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Notepad</h1>
+            <div class="controls">
+                <button id="btn-theme" title="Toggle Dark Mode" aria-label="Toggle theme">🌓</button>
+            </div>
+        </header>
+
+        <!-- Toolbar Section with Actions -->
+        <div class="toolbar">
+            <button id="btn-new">New</button>
+            <button id="btn-open">Open</button>
+            <!-- Hidden file input for opening files smoothly -->
+            <input type="file" id="file-input" accept=".txt" style="display: none;">
+            <button id="btn-save">Save</button>
+            <button id="btn-clear">Clear</button>
+        </div>
+
+        <!-- Editor Area -->
+        <main>
+            <textarea id="editor" placeholder="Start typing your notes here..." autofocus></textarea>
+        </main>
+
+        <!-- Footer Section with Counters and Status -->
+        <footer>
+            <div class="counters">
+                <span id="word-count" class="count-val">0</span> words &nbsp;|&nbsp; 
+                <span id="char-count" class="count-val">0</span> characters
+            </div>
+            <!-- Feedback msg / toast notification -->
+            <div id="status">Ready</div>
+        </footer>
+    </div>
+
+    <!-- Link to our JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>
